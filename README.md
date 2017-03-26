@@ -7,7 +7,7 @@ AspNetCore.QcloudSms
 What is this?
 ----------------
 
-An AspNetCore service implemented ISmsSender interface.
+An AspNetCore implementation of Qcloud SMS service. (Windows/Linux works!)
 
 How to Use
 ----------------
