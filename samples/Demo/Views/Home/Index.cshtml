@@ -1,4 +1,4 @@
-@model SendSmsViewModel
+﻿@model SendSmsViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -10,16 +10,18 @@
     @Html.AntiForgeryToken()
     <dl>
         <dt>
-            @Html.LabelFor(x => x.Mobile)
+            手机号码(Mobile)
         </dt>
         <dd>
             @Html.EditorFor(x => x.Mobile)
         </dd>
         <dt>
-            @Html.LabelFor(x => x.Code)
+            短信内容(Content)
         </dt>
         <dd>
-            @Html.EditorFor(x => x.Code)
+            <p>短信内容必须包含预先申请的短信签名，且与预先申请的短信正文模版完全匹配！！！</p>
+            <p>例如：【新广州入户】898533为您的验证码。如非本人操作，请忽略本短信。</p>
+            @Html.EditorFor(x => x.Content)
         </dd>
     </dl>
     <input type="submit" value="Submit" />

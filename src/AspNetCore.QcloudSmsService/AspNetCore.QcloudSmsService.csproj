@@ -4,13 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>AspNetCore.QcloudSmsService</AssemblyName>
     <PackageId>AspNetCore.QcloudSmsService</PackageId>
-    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>2.0.0-alpha-70820</Version>
-    <VersionPrefix>2.0.0</VersionPrefix>
-    <VersionSuffix>alpha-70820</VersionSuffix>
+    <Version>2.0.0</Version>
     <Description>An AspNetCore implementation for (Tencent) Qcloud SMS service. (Windows/Linux works!)</Description>
     <PackageProjectUrl>https://github.com/myvas/AspNetCore.QcloudSmsService</PackageProjectUrl>
   </PropertyGroup>
@@ -20,6 +14,10 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>

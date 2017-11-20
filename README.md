@@ -11,9 +11,19 @@ An AspNetCore implementation of Qcloud SMS service. (Windows/Linux works!)
 
 How to Use
 ----------------
-* For Web App:
+* Startup/ConfigureServices:
 
-services.AddQcloudSms(options=>{...});
+    services.AddQcloudSms(options =>
+    {
+        options.SdkAppId = Configuration["QcloudSms:SdkAppId"];
+        options.AppKey = Configuration["QcloudSms:AppKey"];
+    });
+
+* Send the SMS via ISendSms:
+        private readonly ISmsSender _smsSender;
+		...
+		var result = await _smsSender.SendSmsAsync(mobile, content);
+
 
 How to Build
 ----------------

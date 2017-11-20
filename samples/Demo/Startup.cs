@@ -11,35 +11,26 @@ namespace AspNetCore.HechinaSmsService.Sample
 {
     public class Startup
     {
-        private readonly IConfigurationRoot _configuration;
+        private readonly IConfigurationRoot Configuration;
 
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
+            var configBuilder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json");
+                .AddJsonFile("appsettings.json")
+                .AddUserSecrets<Startup>();
 
-            if (env.IsDevelopment())
-            {
-                // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
-                builder.AddUserSecrets<Startup>();
-            }
-
-            builder.AddEnvironmentVariables();
-            _configuration = builder.Build();
+            Configuration = configBuilder.Build();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var smsOptions = _configuration.GetSection("QcloudSms");
             services.AddQcloudSms(options =>
             {
-                options.SdkAppId = Convert.ToInt32(smsOptions["SdkAppId"]);
-                options.AppKey = smsOptions["AppKey"];
-                options.VerificationCodeSmsTemplateId = Convert.ToInt32(smsOptions["VerificationCodeSmsTemplateId"]);
-                options.OrganizationSignature = smsOptions["OrganizationSignature"];
+                options.SdkAppId = Configuration["QcloudSms:SdkAppId"];
+                options.AppKey = Configuration["QcloudSms:AppKey"];
             });
 
             services.AddMvc();

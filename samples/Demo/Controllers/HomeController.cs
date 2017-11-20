@@ -9,15 +9,11 @@ namespace AspNetCore.HechinaSmsService.Sample.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IVerificationCodeSmsSender _smsSender;
+        private readonly ISmsSender _smsSender;
 
-        public HomeController(
-            ILoggerFactory loggerFactory,
-            IVerificationCodeSmsSender smsSender)
+        public HomeController(ISmsSender smsSender)
         {
-            _logger = loggerFactory?.CreateLogger<HomeController>() ?? throw new ArgumentNullException(nameof(loggerFactory));
-            _smsSender = smsSender ?? throw new ArgumentNullException(nameof(smsSender));
+            _smsSender = smsSender;
         }
 
         public IActionResult Index()
@@ -29,12 +25,9 @@ namespace AspNetCore.HechinaSmsService.Sample.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SendSms(SendSmsViewModel vm)
         {
-            if (!ModelState.IsValid)
-            {
-                return Ok(false);
-            }
+            if (!ModelState.IsValid) return Ok(false);
 
-            var result = await _smsSender.SendVerificationCodeAsync(vm.Mobile, vm.Code);
+            var result = await _smsSender.SendSmsAsync(vm.Mobile, vm.Content);
 
             return Ok(result);
         }

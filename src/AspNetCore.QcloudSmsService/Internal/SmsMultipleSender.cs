@@ -104,9 +104,9 @@ namespace AspNetCore.QcloudSms.Internal
             string extend,
             string ext)
         {
-            int sdkappid = Options.SdkAppId;
-            string appkey = Options.AppKey;
-            string url = Options.AdvancedServiceUrl;
+            var sdkappid = Options.SdkAppId;
+            var appkey = Options.AppKey;
+            var url = Options.AdvancedServiceUrl;
 
             if (0 != type && 1 != type)
             {
@@ -227,9 +227,9 @@ namespace AspNetCore.QcloudSms.Internal
             string extend,
             string ext)
         {
-            int sdkappid = Options.SdkAppId;
-            string appkey = Options.AppKey;
-            string url = Options.AdvancedServiceUrl;
+            var sdkappid = Options.SdkAppId;
+            var appkey = Options.AppKey;
+            var url = Options.AdvancedServiceUrl;
 
             if (null == sign)
             {

@@ -12,6 +12,6 @@ namespace AspNetCore.HechinaSmsService.Sample.Models
         public string Mobile { get; set; }
 
         [Required]
-        public string Code { get; set; }
+        public string Content { get; set; }
     }
 }

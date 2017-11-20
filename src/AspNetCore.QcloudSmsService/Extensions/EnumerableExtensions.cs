@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.QcloudSms.Extensions
+namespace System.Collections.Generic
 {
 
     /// <summary> 
