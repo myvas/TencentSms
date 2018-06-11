@@ -1,35 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <AssemblyName>AspNetCore.QcloudSmsService.Sample</AssemblyName>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <RootNamespace>AspNetCore.QcloudSmsService.Sample</RootNamespace>
+    <AssemblyName>AspNetCore.Sms.Tencent.Demo</AssemblyName>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>AspNetCore.Sms.Tencent.Demo</RootNamespace>
     <UserSecretsId>aspnetcore-qcloudsmsservice-demo</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="bower.json" />
-    <Content Remove="bundleconfig.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\AspNetCore.QcloudSmsService\AspNetCore.QcloudSmsService.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" PrivateAssets="All" />
   </ItemGroup>
   
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
-    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
-
   </ItemGroup>
-  
+    
   <ItemGroup>
-    <None Include="bower.json" />
-    <None Include="bundleconfig.json" />
+    <ProjectReference Include="..\..\src\AspNetCore.QcloudSmsService\AspNetCore.Sms.Tencent.csproj" />
   </ItemGroup>
 
 </Project>

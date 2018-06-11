@@ -9,7 +9,7 @@ namespace System.Collections.Generic
     /// <summary>
     /// Extension methods for Collections.
     /// </summary>
-    public static class CollectionExtensions
+    internal static class CollectionExtensions
     {
         /// <summary>
         /// Checks whatever given collection object is null or has no item.
