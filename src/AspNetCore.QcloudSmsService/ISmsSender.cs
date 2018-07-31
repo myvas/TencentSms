@@ -14,5 +14,6 @@ namespace AspNetCore.QcloudSms
         /// <param name="content">【短信签名】短信正文</param>
         /// <returns></returns>
         Task<bool> SendSmsAsync(string mobile, string content);
+        Task<bool> SendSmsWithBrandNameAsync(string mobile, string content);
     }
 }

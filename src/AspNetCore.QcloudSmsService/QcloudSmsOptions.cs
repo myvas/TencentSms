@@ -17,8 +17,16 @@ namespace AspNetCore.QcloudSms
         /// </summary>
         public string AppKey { get; set; }
 
+        /// <summary>
+        /// https://yun.tim.qq.com/v5/tlssmssvr/sendsms?sdkappid=xxxxx&random=xxxx
+        /// </summary>
         public string ServiceUrl { get; set; } = QcloudSmsDefaults.ServiceUrl;
 
+        /// <summary>
+        /// https://yun.tim.qq.com/v5/tlssmssvr/sendmultisms2?sdkappid=xxxxx&random=xxxx
+        /// </summary>
         public string AdvancedServiceUrl { get; set; } = QcloudSmsDefaults.AdvancedServiceUrl;
+
+        public string BrandName { get; set; }
     }
 }
