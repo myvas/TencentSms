@@ -1,0 +1,28 @@
+﻿@model SmsSendViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="text-danger">@ViewData["Message"]</div>
+
+<form asp-action="SendSms">
+    <dl>
+        <dt>
+            手机号码(Mobile)
+        </dt>
+        <dd>
+            @Html.EditorFor(x => x.Mobile)
+        </dd>
+        <dt>
+            短信内容(Content)
+        </dt>
+        <dd>
+            <p>短信内容必须包含预先申请的短信签名，且与预先申请的短信正文模版完全匹配！！！</p>
+            <p>例如：【新广州入户】898533为您的验证码。如非本人操作，请忽略本短信。</p>
+            @Html.EditorFor(x => x.Content)
+        </dd>
+    </dl>
+    <input type="submit" value="Submit" />
+</form>

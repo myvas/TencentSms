@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <AssemblyName>AspNetCore.TencentSms.Demo</AssemblyName>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>AspNetCore.TencentSms.Demo</RootNamespace>
+    <UserSecretsId>AspNetCore.TencentSms.Demo</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AspNetCore.TencentSms\AspNetCore.TencentSms.csproj" />
+  </ItemGroup>
+
+</Project>
