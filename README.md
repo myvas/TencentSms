@@ -3,7 +3,7 @@
 [![AppVeyor build status](https://img.shields.io/appveyor/ci/FrankH/AspNetCore-QcloudSms/master.svg?label=appveyor&style=flat-square)](https://ci.appveyor.com/project/FrankH/AspNetCore-QcloudSms)
 
 ## What is this?
-An AspNetCore `ISmsSender` implementation via TencentSms (aka QcloudSms). (Windows/Linux works!)
+An AspNetCore `ISmsSender` implementation via TencentSms. (Windows/Linux works!)
 
 ## How to Use
 ### NuGet
@@ -34,8 +34,8 @@ public IActionResult Xxx()
 }
 ```
 
-## How to Build & Deploy
-* Use Visual Studio 2017 v15.8.2+ with .NET Core SDK v2.1.403+ (dotnet-sdk-2.1.403) installed.
-* Run apps on Windows or Linux with .NET Core Runtime v2.1.5+ (dotnet-runtime-2.1.5) installed.
+## API Implementation Status
+Plan to support the TencentSms API docs here: https://cloud.tencent.com/document/product/382
 
-Download from Microsoft's official website: http://asp.net
+DONE:
+* Single SendSms
