@@ -38,4 +38,5 @@ public IActionResult Xxx()
 Plan to support the TencentSms API docs here: https://cloud.tencent.com/document/product/382
 
 DONE:
-* Single SendSms
+* 国内发送短信（单发短信）
+* 国内群发短信（提交）
