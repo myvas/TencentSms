@@ -3,9 +3,12 @@
 [![AppVeyor build status](https://img.shields.io/appveyor/ci/FrankH/AspNetCore-QcloudSms/master.svg?label=appveyor&style=flat-square)](https://ci.appveyor.com/project/FrankH/AspNetCore-QcloudSms)
 
 ## What is this?
-An AspNetCore ISmsSender implementation via Tencent Cloud (aka. Qcloud) SMS service. (Windows/Linux works!)
+An AspNetCore `ISmsSender` implementation via TencentSms (aka QcloudSms). (Windows/Linux works!)
 
 ## How to Use
+### NuGet
+[AspNetCore.Sms.Tencent](https://www.nuget.org/packages/AspNetCore.Sms.Tencent)
+
 ### Startup/ConfigureServices:
 ```csharp
 services.AddQcloudSms(options =>
@@ -15,13 +18,17 @@ services.AddQcloudSms(options =>
 });
 ```
 
-### Send the SMS via ISendSms:
+### Inject and use it:
 ```csharp
 private readonly ISmsSender _smsSender;
-//...
-var result = await _smsSender.SendSmsAsync(mobile, content);
-```
 
-## How to Build
-Use Visual Studio 2017 v15.7.3 and .NET Core 2.1 installed.
-Download from Microsoft's official website: http://asp.net
+public XxxController(ISmsSender smsSender)
+{
+    _smsSender = smsSender ?? throw new ArgumentNullException(nameof(smsSender);
+}
+
+public IActionResult Xxx()
+{
+    //...
+    var result = await _smsSender.SendSmsAsync(mobile, content);
+}
