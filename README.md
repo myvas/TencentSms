@@ -37,6 +37,9 @@ public IActionResult Xxx()
 ## API Implementation Status
 Plan to support the TencentSms API docs here: https://cloud.tencent.com/document/product/382
 
+Nuget Dependencies:
+* https://www.nuget.org/packages/qcloud.qcloudsms_csharp
+
 DONE:
 * 国内发送短信（单发短信）
 * 国内群发短信（提交）
