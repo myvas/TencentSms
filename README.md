@@ -32,9 +32,9 @@ public IActionResult Xxx()
     //...
     var result = await _smsSender.SendSmsAsync(mobile, content);
 }
+```
 
 ## How to Build & Deploy
 * Use Visual Studio 2017 v15.8.2+ with .NET Core SDK v2.1.403 (dotnet-sdk-2.1.403) installed.
 * Run apps on Windows or Linux with .NET Core Runtime v2.1.5 (dotnet-runtime-2.1.5) installed.
-
 Download from Microsoft's official website: http://asp.net
