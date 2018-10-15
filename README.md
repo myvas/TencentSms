@@ -1,24 +1,19 @@
-# AspNetCore.TencentSms
-[![Travis build status](https://img.shields.io/travis/myvas/AspNetCore.QcloudSms.svg?label=travis-ci&style=flat-square&branch=master)](https://travis-ci.org/myvas/AspNetCore.QcloudSms)
-[![AppVeyor build status](https://img.shields.io/appveyor/ci/FrankH/AspNetCore-QcloudSms/master.svg?label=appveyor&style=flat-square)](https://ci.appveyor.com/project/FrankH/AspNetCore-QcloudSms)
+# TencentSms
+An `ISmsSender` implementation via TencentSms. (aka QcloudSms)
 
-## What is this?
-An AspNetCore `ISmsSender` implementation via TencentSms. (Windows/Linux works!)
+## NuGet
+[Myvas.AspNetCore.TencentSms](https://www.nuget.org/packages/Myvas.AspNetCore.TencentSms)
 
-## How to Use
-### NuGet
-https://www.nuget.org/packages/AspNetCore.TencentSms
-
-### Startup/ConfigureServices()
+## ConfigureServices
 ```csharp
-services.AddQcloudSms(options =>
+services.AddTencentSms(options =>
 {
     options.SdkAppId = Configuration["TencentSms:SdkAppId"];
     options.AppKey = Configuration["TencentSms:AppKey"];
 });
 ```
 
-### Inject & Invoke:
+## Inject & Invoke
 ```csharp
 private readonly ISmsSender _smsSender;
 
@@ -35,11 +30,12 @@ public IActionResult Xxx()
 ```
 
 ## API Implementation Status
-Plan to support the TencentSms API docs here: https://cloud.tencent.com/document/product/382
+### Plan:
+To support the TencentSms API, docs here: https://cloud.tencent.com/document/product/382
 
-Nuget Dependencies:
-* https://www.nuget.org/packages/qcloud.qcloudsms_csharp
+Dependencies:
+- https://www.nuget.org/packages/qcloud.qcloudsms_csharp
 
-DONE:
-* 国内发送短信（单发短信）
-* 国内群发短信（提交）
+### DONE:
+- 国内发送短信（发送一条短信）
+- 国内群发短信（提交群发短信）
