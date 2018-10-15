@@ -1,5 +1,5 @@
 # TencentSms
-An `ISmsSender` implementation via TencentSms. (aka QcloudSms)
+An `ISmsSender` implementation for TencentSms. (aka QcloudSms)
 
 ## NuGet
 [Myvas.AspNetCore.TencentSms](https://www.nuget.org/packages/Myvas.AspNetCore.TencentSms)
