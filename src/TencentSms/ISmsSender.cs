@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AspNetCore.TencentSms
+namespace Myvas.AspNetCore.TencentSms
 {
     public interface ISmsSender
     {

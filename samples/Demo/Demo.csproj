@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <AssemblyName>AspNetCore.TencentSms.Demo</AssemblyName>
+    <AssemblyName>Myvas.AspNetCore.TencentSms.Demo</AssemblyName>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>AspNetCore.TencentSms.Demo</RootNamespace>
+    <RootNamespace>Demo</RootNamespace>
     <UserSecretsId>AspNetCore.TencentSms.Demo</UserSecretsId>
   </PropertyGroup>
 
@@ -17,7 +17,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\src\AspNetCore.TencentSms\AspNetCore.TencentSms.csproj" />
+    <ProjectReference Include="..\..\src\TencentSms\TencentSms.csproj" />
   </ItemGroup>
 
 </Project>

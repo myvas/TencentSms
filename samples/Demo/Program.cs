@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.IO;
 
-namespace AspNetCore.TencentSms.Demo
+namespace Demo
 {
     public class Program
     {

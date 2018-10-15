@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.TencentSms
+namespace Myvas.AspNetCore.TencentSms
 {
     public static class TencentSmsDefaults
     {

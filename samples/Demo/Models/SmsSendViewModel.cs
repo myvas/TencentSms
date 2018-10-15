@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore.TencentSms.Demo.Models
+namespace Demo.Models
 {
     public class SmsSendViewModel
     {

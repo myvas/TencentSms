@@ -5,8 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Myvas.AspNetCore.TencentSms;
 
-namespace AspNetCore.TencentSms
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class TencentSmsServiceCollectionExtensions
     {

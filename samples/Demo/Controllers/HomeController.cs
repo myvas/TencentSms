@@ -1,14 +1,16 @@
-using AspNetCore.TencentSms.Demo.Models;
+using Demo.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Myvas.AspNetCore.TencentSms;
 using System;
 using System.Threading.Tasks;
-using AspNetCore.TencentSms;
 
-namespace AspNetCore.TencentSms.Demo.Controllers
+namespace Demo.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ISmsSender _smsSender;
+        private readonly ILogger _logger;
 
         public HomeController(ISmsSender smsSender)
         {
@@ -30,7 +32,7 @@ namespace AspNetCore.TencentSms.Demo.Controllers
             }
 
             var result = await _smsSender.SendSmsAsync(vm.Mobile, vm.Content);
-
+            
             return Ok(result);
         }
     }

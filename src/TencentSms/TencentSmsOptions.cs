@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace AspNetCore.TencentSms
+namespace Myvas.AspNetCore.TencentSms
 {
     public class TencentSmsOptions
     {
