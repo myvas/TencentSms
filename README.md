@@ -31,9 +31,9 @@ public IActionResult Xxx()
 
 ## API Implementation Status
 ### Plan:
-To support the TencentSms API, docs here: https://cloud.tencent.com/document/product/382
+- To support the TencentSms API, docs here: https://cloud.tencent.com/document/product/382
 
-Dependencies:
+### Dependencies:
 - https://www.nuget.org/packages/qcloud.qcloudsms_csharp
 
 ### DONE:
