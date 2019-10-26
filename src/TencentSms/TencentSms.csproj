@@ -4,7 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Myvas.AspNetCore.TencentSms</AssemblyName>
     <PackageId>Myvas.AspNetCore.TencentSms</PackageId>
-    <Version>2.1.404</Version>
+    <Version>2.2.402.0</Version>
+    <PackageVersion>2.2.402</PackageVersion>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>An AspNetCore ISmsSender implementation via TencentSms (aka QcloudSms). (Windows/Linux works!)</Description>
     <PackageProjectUrl>https://github.com/myvas/TencentSms</PackageProjectUrl>
     <RootNamespace>Myvas.AspNetCore.TencentSms</RootNamespace>
