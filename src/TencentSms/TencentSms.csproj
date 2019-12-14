@@ -1,11 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>Myvas.AspNetCore.TencentSms</AssemblyName>
     <PackageId>Myvas.AspNetCore.TencentSms</PackageId>
-    <Version>2.2.402.0</Version>
-    <PackageVersion>2.2.402</PackageVersion>
+    <Version>3.1.0.1</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>An AspNetCore ISmsSender implementation via TencentSms (aka QcloudSms). (Windows/Linux works!)</Description>
     <PackageProjectUrl>https://github.com/myvas/TencentSms</PackageProjectUrl>
@@ -14,9 +13,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.0" />
     <PackageReference Include="qcloud.qcloudsms_csharp" Version="0.1.6" />
   </ItemGroup>
 
