@@ -3,7 +3,7 @@
 		<RepositoryUrl>https://github.com/myvas/TencentSms</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<LangVersion>latest</LangVersion>
-		<Product>Myvas.AspNetCore.Authentication</Product>
+		<Product>Myvas.AspNetCore.TencentSms</Product>
 		<Copyright>© $([System.DateTime]::Now.Year) Myvas Foundation</Copyright>
 	</PropertyGroup>
 	
