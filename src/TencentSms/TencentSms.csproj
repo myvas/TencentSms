@@ -1,22 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;netstandard2.0</TargetFrameworks>
-    <AssemblyName>Myvas.AspNetCore.TencentSms</AssemblyName>
-    <PackageId>Myvas.AspNetCore.TencentSms</PackageId>
-    <Version>6.0.2.20221</Version>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>An AspNetCore ISmsSender implementation via TencentSms (aka QcloudSms). (Windows/Linux works!)</Description>
-    <PackageProjectUrl>https://github.com/myvas/TencentSms</PackageProjectUrl>
-    <RootNamespace>Myvas.AspNetCore.TencentSms</RootNamespace>
-    <Authors>Myvas</Authors>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
+		<AssemblyName>Myvas.AspNetCore.TencentSms</AssemblyName>
+		<PackageId>Myvas.AspNetCore.TencentSms</PackageId>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>An AspNetCore ISmsSender implementation via TencentSms (aka QcloudSms).</Description>
+		<PackageProjectUrl>https://github.com/myvas/TencentSms</PackageProjectUrl>
+		<RootNamespace>Myvas.AspNetCore.TencentSms</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
-    <PackageReference Include="qcloud.qcloudsms_csharp" Version="0.1.6" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="qcloud.qcloudsms_csharp" Version="0.1.6" />
+	</ItemGroup>
 
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="3.1.0" />
+	</ItemGroup>
 </Project>
