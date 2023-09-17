@@ -6,10 +6,11 @@
 		<Product>Myvas.AspNetCore.TencentSms</Product>
 		<Copyright>© $([System.DateTime]::Now.Year) Myvas Foundation</Copyright>
 	</PropertyGroup>
-	
+
 	<PropertyGroup>
-		<MinVerVersion>6.0.3</MinVerVersion>
-		<MinVerDefaultPreReleasePhase>alpha</MinVerDefaultPreReleasePhase>
+		<MinVerVersion>7.0</MinVerVersion>
+		<MinVerIgnoreHeight>true</MinVerIgnoreHeight>
+		<MinVerDefaultPreReleaseIdentifiers>alpha</MinVerDefaultPreReleaseIdentifiers>
 	</PropertyGroup>
 	<Target Name="CustomFileVersion" AfterTargets="MinVer">
 		<PropertyGroup>
