@@ -8,7 +8,11 @@
 		<Description>An AspNetCore ISmsSender implementation via TencentSms (aka QcloudSms).</Description>
 		<PackageProjectUrl>https://github.com/myvas/TencentSms</PackageProjectUrl>
 		<RootNamespace>Myvas.AspNetCore.TencentSms</RootNamespace>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="qcloud.qcloudsms_csharp" Version="0.1.6" />

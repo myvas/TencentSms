@@ -1,4 +1,6 @@
 # TencentSms
+![TencentSms github actions status](https://github.com/myvas/AspNetCore.TencentSms/actions/workflows/dotnet.yml/badge.svg)
+
 An `ISmsSender` implementation for TencentSms. (aka QcloudSms)
 
 ## Demo
