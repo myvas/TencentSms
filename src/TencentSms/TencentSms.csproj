@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0;net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>net9.0;net8.0;net7.0;net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
 		<AssemblyName>Myvas.AspNetCore.TencentSms</AssemblyName>
 		<PackageId>Myvas.AspNetCore.TencentSms</PackageId>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -16,6 +16,18 @@
 
 	<ItemGroup>
 		<PackageReference Include="qcloud.qcloudsms_csharp" Version="0.1.6" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net9.0' ">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' ">

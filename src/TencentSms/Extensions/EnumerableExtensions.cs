@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace Myvas.AspNetCore.TencentSms.Internal
 {
-
-    /// <summary> 
+    /// <summary>
     /// Extension methods for <see cref="IEnumerable{T}"/>.
     /// </summary>
     internal static class EnumerableExtensions
