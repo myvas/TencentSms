@@ -8,8 +8,12 @@ on:
     branches: [ "master", "experimental" ]
     tags:
       - v9.0.*
+    paths:
+      - 'src/**'
   pull_request:
     branches: [ "master" ]
+    paths:
+      - 'src/**'
 
 jobs:
   build:
@@ -30,6 +34,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+  test:
+    needs: build
+    steps:
     - name: Test with the dotnet CLI
       run: dotnet test --no-build --verbosity normal --logger trx --results-directory "TestResults-${{ matrix.dotnet-version }}"
     - name: Upload dotnet test results
@@ -37,7 +44,10 @@ jobs:
       with:
         name: dontet-results-${{ matrix.dotnet-version }}
         path: TestResults-${{ matrix.dotnet-version }}
-
+  pack:
+    if: ${{ startsWith(github.ref, 'refs/tags') }}
+    needs: test
+    steps:
     - name: Create the package (.nupkg)
       run: dotnet pack -c Release
     - name: Publish the package to nuget.org
