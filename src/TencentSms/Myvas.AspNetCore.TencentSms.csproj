@@ -4,14 +4,15 @@
 		<TargetFrameworks>net9.0;net8.0;net7.0;net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
 		<AssemblyName>Myvas.AspNetCore.TencentSms</AssemblyName>
 		<PackageId>Myvas.AspNetCore.TencentSms</PackageId>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Description>An AspNetCore ISmsSender implementation via TencentSms (aka QcloudSms).</Description>
 		<PackageProjectUrl>https://github.com/myvas/TencentSms</PackageProjectUrl>
 		<RootNamespace>Myvas.AspNetCore.TencentSms</RootNamespace>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\LICENSE.txt" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>

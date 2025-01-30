@@ -33,8 +33,4 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Update="MinVer" Version="6.0.0" />
-  </ItemGroup>
-
 </Project>
