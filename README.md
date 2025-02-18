@@ -1,8 +1,8 @@
 # Myvas.AspNetCore.TencentSms
 
 [![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/myvas/AspNetCore.TencentSms?label=github)](https://github.com/myvas/TencentSms)
-[![GitHub Actions Status](https://github.com/myvas/AspNetCore.TencentSms/actions/workflows/dotnet.yml/badge.svg)](https://github.com/myvas/TencentSms/actions)
-[![GitHub Actions Status](https://github.com/myvas/AspNetCore.TencentSms/actions/workflows/nuget.yml/badge.svg)](https://github.com/myvas/TencentSms/actions)
+[![GitHub Actions Status](https://github.com/myvas/AspNetCore.TencentSms/actions/workflows/test.yml/badge.svg)](https://github.com/myvas/TencentSms/actions/workflows/test.yml)
+[![GitHub Actions Status](https://github.com/myvas/AspNetCore.TencentSms/actions/workflows/publish.yml/badge.svg)](https://github.com/myvas/TencentSms/actions/workflows/publish.yml)
 [![NuGet](https://img.shields.io/nuget/v/Myvas.AspNetCore.TencentSms.svg)](https://www.nuget.org/packages/Myvas.AspNetCore.TencentSms) 
 
 An `ISmsSender` implementation for TencentSms. (aka QcloudSms)

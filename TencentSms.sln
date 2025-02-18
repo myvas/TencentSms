@@ -11,11 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{E9754587-13F5-4E
 		delete_all_bin_and_obj.cmd = delete_all_bin_and_obj.cmd
 		Directory.Build.props = Directory.Build.props
 		Directory.Build.targets = Directory.Build.targets
-		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 		global.json = global.json
 		LICENSE.txt = LICENSE.txt
-		NuGet.Config = NuGet.Config
-		.github\workflows\nuget.yml = .github\workflows\nuget.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -24,6 +21,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1E1D21FE-24F0-46F9-BA4C-B2FCD65FFF7F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "test\UnitTest\UnitTest.csproj", "{F1DD03CD-F442-4D30-AA25-5A3F7945B0C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
+		.github\dependabot.yml = .github\dependabot.yml
+		.github\workflows\pack-and-publish.yml = .github\workflows\pack-and-publish.yml
+		.github\workflows\publish.yml = .github\workflows\publish.yml
+		.github\workflows\test.yml = .github\workflows\test.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F63EFE92-CDBA-43C4-BD91-AA145DFF8EEF} = {672FEA18-F072-4549-9C4C-DBD1F9CDC7BB}
 		{F1DD03CD-F442-4D30-AA25-5A3F7945B0C1} = {1E1D21FE-24F0-46F9-BA4C-B2FCD65FFF7F}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {E9754587-13F5-4E3A-9F3F-71C98EF97990}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {084E5FFC-66BB-40F9-A42B-8CF8FF2C4A41}
